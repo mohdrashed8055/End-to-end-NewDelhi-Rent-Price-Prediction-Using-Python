@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>New Delhi Rent Price Prediction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style type="text/css">
+*{margin:0;padding:0;box-sizing:border-box}body,html{height:100%;font-family:Poppins-Regular,sans-serif}a{font-family:Poppins-Regular;font-size:14px;line-height:1.7;color:#666;margin:0;transition:all .4s;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s}a:focus{outline:0!important}a:hover{text-decoration:none}h1,h2,h3,h4,h5,h6{margin:0}input{outline:0;border:none}input:focus::-webkit-input-placeholder{color:transparent}input:focus:-moz-placeholder{color:transparent}input:focus::-moz-placeholder{color:transparent}input:focus:-ms-input-placeholder{color:transparent}input::-webkit-input-placeholder{color:#adadad}input:-moz-placeholder{color:#adadad}input::-moz-placeholder{color:#adadad}input:-ms-input-placeholder{color:#adadad}button{outline:0!important;border:none;background:0 0}button:hover{cursor:pointer}.container{max-width:1200px}.container-contact100{width:100%;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding:15px;background:#a64bf4;background:-webkit-linear-gradient(45deg,#00dbde,#fc00ff);background:-o-linear-gradient(45deg,#00dbde,#fc00ff);background:-moz-linear-gradient(45deg,#00dbde,#fc00ff);background:linear-gradient(45deg,#00dbde,#fc00ff)}.wrap-contact100{width:500px;background:#fff;border-radius:10px;overflow:hidden;padding:42px 55px 45px 55px}.contact100-form{width:100%}.contact100-form-title{display:block;font-family:Poppins-Bold;font-size:39px;color:#333;line-height:1.2;text-align:center;padding-bottom:10px}.wrap-input100{width:100%;position:relative;border-bottom:2px solid #d9d9d9;padding-bottom:10px;margin-bottom:15px}.input100{display:block;width:100%;background:0 0;font-family:Poppins-Medium;font-size:18px;color:#333;line-height:1.2;padding:0 5px}.focus-input100{position:absolute;display:block;width:100%;height:100%;top:0;left:0;pointer-events:none}.focus-input100::before{content:"";display:block;position:absolute;bottom:-2px;left:0;width:0;height:2px;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s;background:#7f7f7f}input.input100{height:40px}.input100:focus+.focus-input100::before{width:100%}.has-val.input100+.focus-input100::before{width:100%}.container-contact100-form-btn{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;justify-content:center;padding-top:13px}.wrap-contact100-form-btn{width:100%;display:block;position:relative;z-index:1;border-radius:25px;overflow:hidden;margin:0 auto}.contact100-form-bgbtn{position:absolute;z-index:-1;width:300%;height:100%;background:#a64bf4;background:-webkit-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:-o-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:-moz-linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);background:linear-gradient(left,#00dbde,#fc00ff,#00dbde,#fc00ff);top:0;left:-100%;-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s}.contact100-form-btn{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;justify-content:center;align-items:center;padding:0 20px;width:100%;height:50px;font-family:Poppins-Medium;font-size:16px;color:#fff;line-height:1.2}.wrap-contact100-form-btn:hover .contact100-form-bgbtn{left:0}.contact100-form-btn i{-webkit-transition:all .4s;-o-transition:all .4s;-moz-transition:all .4s;transition:all .4s}.contact100-form-btn:hover i{-webkit-transform:translateX(10px);-moz-transform:translateX(10px);-ms-transform:translateX(10px);-o-transform:translateX(10px);transform:translateX(10px)}@media (max-width:576px){.wrap-contact100{padding:72px 15px 65px 15px}}.wrap-contact100{width:800px;background:#fff;border-radius:10px;overflow:hidden;padding:42px 55px 45px 55px}.contact100-form-title{font-size:26px}
+</style>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="/result" method="POST">
+				 </section>
+				<span class="contact100-form-title" style="font-size:32px">New Delhi Rent Price Prediction</span>
+				<h1 align="center"> {{result}} </h1>
+				<span class="contact100-form-title" id="output" style="color: #ff0000;" >&nbsp;</span>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Size (Square foot)</span>
+					<input class="input100" type="text" id="size_sq_ft" name="size_sq_ft" placeholder="Size of flat, building, villa, etc (ex: 450)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Property Type</span>
+					<select  class="input100" id="propertyType" name="propertyType" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+							<option value="">Select Property Type</option>
+							<option value="0">Apartment</option>
+							<option value="1">Independent Floor</option>
+							<option value="2">Independent House</option>
+							<option value="3">Villa</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Bedrooms</span>
+					<input class="input100" type="text" id="bedrooms" name="bedrooms" placeholder="No. of bedrooms (ex: 2)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Latitude</span>
+					<input class="input100" type="text" id="latitude" name="latitude" placeholder="Latitude (ex: 28.64)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Longitude</span>
+					<input class="input100" type="text" id="longitude	" name="longitude" placeholder="Longitude (ex: 77.31)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100" style="border-bottom: 0px;" >
+					<span class="label-input100">Suburb Name</span>
+						<select  class="input100" id="suburbName" name="suburbName" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+							<option value="">Select Suburb Name</option>
+							<option value="0">Central Delhi</option>
+							<option value="1">Dwarka</option>
+							<option value="2">East Delhi</option>
+							<option value="3">North Delhi</option>
+							<option value="4">North West Delhi</option>
+							<option value="6">Rohini</option>
+							<option value="7">South Delhi</option>
+							<option value="8">South West Delhi</option>
+							<option value="9">West Delhi</option>
+							<option value="5">Other</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Closest Metro Station (km)</span>
+					<input class="input100" type="text" id="closest_mtero_station_km" name="closest_mtero_station_km" placeholder="Closest Metro Station (km) (ex: 3)">
+					<span class="focus-input100"></span>
+				</div>
+			
+				<div class="wrap-input100 " >
+					<span class="label-input100">Airport distance (km)</span>
+					<input class="input100" type="text" id="AP_dist_km" name="AP_dist_km" placeholder="Airport distance (km) (ex: 22.24)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">AIIMS hospital distance (km)</span>
+					<input class="input100" type="text" id="Aiims_dist_km" name="Aiims_dist_km" placeholder="AIIMS hospital distance (km) (ex: 12.24)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Railway station distance (km)</span>
+					<input class="input100" type="text" id="NDRLW_dist_km" name="NDRLW_dist_km" placeholder="Railway station distance (km) (ex: 8.34)">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn" id='submit' type="submit" value="Submit">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
