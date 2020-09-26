@@ -1,0 +1,27 @@
+Context
+The dataset is from a rental price prediction project I did. Includes different types of properties (Apartments, Independent floors, Independent houses, Villas etc.)
+It contains 17890 rental listings from a popular real estate website. It can be used for rental prediction projects, analysis of areas of affluence etc.
+
+Content
+The dataset multiple quantitative, categorical and co-ordinate features including :
+
+Data about the houses :
+sizesqft,
+propertyType,
+bedrooms,
+
+Data about the locality of the house :
+latitude,
+longitude,
+localityName,
+suburbName,
+cityName,
+
+Asking Rent :
+price,
+
+Property agency :
+companyName,
+
+Distance to closest landmarks : (geodesic distance, not driving-road distance)
+closestmterostationkm, APdistkm, Aiimsdistkm, NDRLWdist_km
